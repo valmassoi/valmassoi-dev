@@ -4,7 +4,7 @@ import styles from './layout.module.scss';
 
 const Footer = () => (
   <div className={styles.footer}>
-    <a href="https://github.com/valmassoi" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://github.com/valmassoi" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
   </div>
 );
 

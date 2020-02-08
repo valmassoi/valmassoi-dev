@@ -5,6 +5,7 @@ import Box from '../components/Box/Box';
 import MailBox from '../components/svgs/mailBox.svg'
 
 import styles from './contact.module.scss';
+import { H2 } from '../components/htmlElements';
 
 const Contact = () => {
   return (
@@ -17,8 +18,8 @@ const Contact = () => {
         </div>
         <div className={styles.rightSide}>
           <Box className={styles.emailBox}>
-            <h2 className={styles.email}>Email me</h2>
-            <p>valmassoi@pm.me</p>
+            <H2>Email me</H2>
+            <p className={styles.emailAddress}>valmassoi@pm.me</p>
           </Box>
         </div>
       </div>

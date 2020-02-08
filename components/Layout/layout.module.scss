@@ -1,3 +1,5 @@
+@import '../../styles/colors.module.scss';
+
 :global(body) {
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
@@ -13,6 +15,32 @@
   flex: 1;
 }
 
+.content {
+  background-color: $gray50;
+}
+
 .footer {
   background-color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.homeLink {
+  color: black;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.navLinks {
+  list-style-type: none;
+  margin: 0;
+  li {
+    float: left;
+    margin-left: 20px;
+  }
 }

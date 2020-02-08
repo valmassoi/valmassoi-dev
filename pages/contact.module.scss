@@ -11,7 +11,6 @@
   flex-wrap: wrap;
   height: 80vh;
   align-items: center;
-  background-color: #FAFAFA;
 }
 
 .leftSide,
@@ -25,7 +24,7 @@
 }
 
 .leftSide {
-  border-right: 1px solid $gray100;
+  border-right: 1px solid $gray300;
 }
 
 .mailboxWrapper {
@@ -37,4 +36,8 @@
 .emailBox {
   margin: 50px;
   width: 300px;
+}
+
+.emailAddress {
+  margin: 10px 0 0;
 }

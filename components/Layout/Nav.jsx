@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
-import NProgress from 'nprogress'
+import NProgress from 'nprogress';
+
+import styles from './layout.module.scss';
 
 const links = [
   { href: '/contact', label: 'Contact' },
@@ -22,13 +24,11 @@ Router.onRouteChangeError = () => {
 };
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Valmassoi</a>
-        </Link>
-      </li>
+  <nav className={styles.navbar}>
+    <Link href="/">
+      <a className={styles.homeLink}>Valmassoi</a>
+    </Link>
+    <ul className={styles.navLinks}>
       {links.map(({ key, href, label }) => (
         <li key={key}>
           <Link href={href}>
