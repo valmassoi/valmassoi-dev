@@ -1,12 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
+import NProgress from 'nprogress'
 
 const links = [
   { href: 'https://github.com/valmassoi', label: 'GitHub' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/resume', label: 'Resume' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;
 });
+
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
+Router.onRouteChangeError = () => {
+  NProgress.done();
+};
 
 const Nav = () => (
   <nav>

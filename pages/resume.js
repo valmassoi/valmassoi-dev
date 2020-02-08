@@ -2,16 +2,16 @@ import React from 'react';
 import Head from '../components/head';
 import Nav from '../components/nav';
 
-import styles from './index.module.scss';
+import styles from './resume.module.scss';
 
-const Home = () => {
+const Resume = () => {
   return (
     <div>
-      <Head title="Home" />
+      <Head title="Resume" />
       <Nav />
-      <h1>Welcome</h1>
+      <h1>Resume</h1>
     </div>
   );
 };
 
-export default Home;
+export default Resume;
