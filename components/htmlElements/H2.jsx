@@ -11,7 +11,7 @@ const H2 = ({
       {children}
       <style jsx>{`
         h2 {
-          color: ${colors.purple};
+          color: ${colors.accentColor};
           font-size: 24px;
           margin: 0;
         }

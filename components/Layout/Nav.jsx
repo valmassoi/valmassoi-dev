@@ -27,8 +27,6 @@ const Nav = () => {
     return link;
   });
 
-  console.log(links)
-
   return (
     <nav className={styles.navbar}>
       <Link href="/">

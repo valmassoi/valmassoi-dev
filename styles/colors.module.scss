@@ -9,6 +9,8 @@ $gray400: #BDBDBD;
 $blue: #007ace;
 $purple: #6C63FF;
 
+$accentColor: $purple;
+
 :export {
-  purple: $purple;
+  accentColor: $accentColor;
 }
