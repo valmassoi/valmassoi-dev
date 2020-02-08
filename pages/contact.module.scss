@@ -1,5 +1,40 @@
 @import '../styles/colors.module.scss';
 
 .email {
-  color: $blue;
+  color: $purple;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80vh;
+  align-items: center;
+  background-color: #FAFAFA;
+}
+
+.leftSide,
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftSide {
+  border-right: 1px solid $gray100;
+}
+
+.mailboxWrapper {
+  margin: 100px;
+  min-width: 300px  ;
+  max-width: 400px;
+}
+
+.emailBox {
+  margin: 50px;
+  width: 300px;
 }

@@ -1,16 +1,13 @@
 import React from 'react';
-import Head from '../components/head';
-import Nav from '../components/nav';
+import Layout from '../components/Layout/Layout';
 
 import styles from './resume.module.scss';
 
 const Resume = () => {
   return (
-    <div>
-      <Head title="Resume" />
-      <Nav />
+    <Layout title="Resume">
       <h1>Resume</h1>
-    </div>
+    </Layout>
   );
 };
 

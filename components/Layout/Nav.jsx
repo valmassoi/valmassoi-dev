@@ -4,7 +4,6 @@ import Router from 'next/router';
 import NProgress from 'nprogress'
 
 const links = [
-  { href: 'https://github.com/valmassoi', label: 'GitHub' },
   { href: '/contact', label: 'Contact' },
   { href: '/resume', label: 'Resume' },
 ].map(link => {
@@ -32,7 +31,9 @@ const Nav = () => (
       </li>
       {links.map(({ key, href, label }) => (
         <li key={key}>
-          <a href={href}>{label}</a>
+          <Link href={href}>
+            <a>{label}</a>
+          </Link>
         </li>
       ))}
     </ul>

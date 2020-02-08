@@ -1,0 +1,15 @@
+@import '../../styles/colors.module.scss';
+
+.box {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
+  // color: $gray-10;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  position: relative;
+}
+
+// .success {
+//   border-top: 3px solid $green;
+// }
