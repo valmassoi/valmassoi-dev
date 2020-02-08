@@ -20,7 +20,18 @@
 }
 
 .footer {
+  height: 50px;
   background-color: white;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  a {
+    color: $gray400;
+  }
 }
 
 .navbar {
