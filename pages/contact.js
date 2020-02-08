@@ -17,6 +17,7 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.rightSide}>
+          {/* TODO copy to clipboard */}
           <Box className={styles.emailBox}>
             <H2>Email me</H2>
             <p className={styles.emailAddress}>valmassoi@pm.me</p>
