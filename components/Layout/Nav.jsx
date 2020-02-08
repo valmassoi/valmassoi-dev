@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
+import { useDimensions } from 'react-recipes';
 import NProgress from 'nprogress';
 import cn from 'classnames';
 
+import breakpoints from '../../styles/breakpoints.module.scss';
 import styles from './layout.module.scss';
 
 Router.onRouteChangeStart = () => {
@@ -17,6 +19,10 @@ Router.onRouteChangeError = () => {
 };
 
 const Nav = () => {
+  const [wrapperRef, dimensions] = useDimensions(true, 100);
+  const isMobile = dimensions.width < parseFloat(breakpoints.mobile);
+  console.log({isMobile});
+  
   const links = [
     { href: '/resume', label: 'Resume' },
     { href: '/contact', label: 'Contact' },
@@ -28,7 +34,7 @@ const Nav = () => {
   });
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} ref={wrapperRef}>
       <Link href="/">
         <a className={styles.homeLink}>Valmassoi</a>
       </Link>
