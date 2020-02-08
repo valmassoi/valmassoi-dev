@@ -22,7 +22,9 @@ const Resume = ({
 }) => {
   return (
     <Layout title="Resume">
-      <ReactMarkdown source={resumeData} className={styles.markdown} />
+      <div className={styles.markdownWrapper}>
+        <ReactMarkdown source={resumeData} className={styles.markdown} />
+      </div>
     </Layout>
   );
 };

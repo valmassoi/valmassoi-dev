@@ -1,8 +1,12 @@
 @import '../styles/colors.module.scss';
 
+.markdownWrapper {
+  padding: 100px 15px;
+}
+
 .markdown {
   max-width: 900px;
-  margin: 100px auto;
+  margin: 0px auto;
   padding: 40px;
   border-radius: 10px;
   background-color: $white;
