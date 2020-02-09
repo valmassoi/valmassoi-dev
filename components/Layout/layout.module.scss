@@ -19,22 +19,6 @@
   background-color: $gray50;
 }
 
-.footer {
-  height: 50px;
-  background-color: white;
-}
-
-.footerLinks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  a {
-    color: $gray400;
-    margin: 0 10px;
-  }
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
