@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import styles from './box.module.scss';
 
-const Box = ({ children, color, className, styleMode, ...rest }) => {
+const Box = ({ children, className, ...rest }) => {
   return (
     <div
       className={cn(styles.box, className)}
