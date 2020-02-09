@@ -11,21 +11,21 @@ const Layout = ({
   children,
   title,
 }) => (
-    <div className={styles.layout}>
-      <Head title={title} />
-      <div className={styles.contentWrapper}>
-        <Nav />
-        <div className={styles.content}>
-          {children}
-        </div>
+  <div className={styles.layout}>
+    <Head title={title} />
+    <div className={styles.contentWrapper}>
+      <Nav />
+      <div className={styles.content}>
+        {children}
       </div>
-      <Footer />
     </div>
-  );
+    <Footer />
+  </div>
+);
 
 Layout.propTypes = {
-  children: PropTypes.node,
   title: PropTypes.string.isRequired,
+  children: PropTypes.node,
 };
 
 Layout.defaultProps = {

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Layout from '../components/Layout/Layout';
-import NotFound from '../components/svgs/notFound.svg'
+import NotFound from '../components/svgs/notFound.svg';
 
-import styles from './error.module.scss'
+import styles from './error.module.scss';
 
 const Error = () => {
   return (

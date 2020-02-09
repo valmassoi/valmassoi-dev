@@ -7,18 +7,19 @@ const H2 = ({
   children,
   ...rest
 }) => (
-    <h2 {...rest}>
-      {children}
-      <style jsx>{`
+  <h2 {...rest}>
+    {children}
+    <style jsx>
+      {`
         h2 {
           color: ${colors.accentColor};
           font-size: 24px;
           margin: 0;
         }
       `}
-      </style>
-    </h2>
-  );
+    </style>
+  </h2>
+);
 
 H2.propTypes = {
   children: PropTypes.node,

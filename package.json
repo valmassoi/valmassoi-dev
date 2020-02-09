@@ -18,6 +18,7 @@
     "next": "^9.2.1",
     "node-sass": "^4.13.1",
     "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
@@ -25,5 +26,15 @@
     "react-markdown": "^4.3.1",
     "react-recipes": "^0.2.1",
     "react-typist": "^2.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0"
   }
 }
