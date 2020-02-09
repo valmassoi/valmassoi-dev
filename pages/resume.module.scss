@@ -20,6 +20,38 @@
     background-color: rgba(27, 31, 35, .05);
     border-radius: 3px;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid $accentColor;
+    &:hover {
+      color: darken($accentColor, 30);
+    }
+  }
+
+  blockquote > p {
+    border-left: 2px solid $gray400;
+    padding: 0 0 5px 15px;
+    margin: 7px 0;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    margin: 5px 0;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
 }
 
 .markdownToggle {
