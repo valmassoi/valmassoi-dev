@@ -1,4 +1,5 @@
 @import '../styles/colors.module.scss';
+@import '../styles/breakpoints.module.scss';
 
 .email {
   color: $accentColor;
@@ -25,6 +26,9 @@
 
 .leftSide {
   border-right: 1px solid $gray300;
+  @media (max-width: $largeMobile) {
+    display: none;
+  }
 }
 
 .mailboxWrapper {
@@ -39,6 +43,10 @@
   cursor: pointer;
   position: relative;
   transition: opacity .1s ease-in-out, background-color .4s;
+  @media (max-width: $largeMobile) {
+    margin: 0 auto;
+    width: 250px;
+  }
 }
 
 .emailAddress {
