@@ -1,0 +1,20 @@
+// @import 'react-typist/dist/Typist.css'
+:global(.Typist) :global(.Cursor) {
+  display: inline-block;
+
+  &--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+    @keyframes blink {
+      0% { opacity:1; }
+      50% { opacity:0; }
+      100% { opacity:1; }
+    }
+  }
+}
+
+.page {
+  max-width: 900px;
+  padding: 100px 40px;
+  margin: 0 auto;
+}
