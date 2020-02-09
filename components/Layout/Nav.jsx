@@ -29,7 +29,7 @@ const Nav = () => {
       </Link>
       <ul className={styles.navLinks}>
         {links.map(({ key, href, label, active }) => (
-          <li key={key} className={cn({[`${styles.activeLink}`]: active})}>
+          <li key={key} className={cn({[styles.activeLink]: active})}>
             <Link href={href}>
               <a>{label}</a>
             </Link>
