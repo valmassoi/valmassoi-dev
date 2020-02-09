@@ -13,12 +13,12 @@ import { H2 } from '../components/htmlElements';
 const EMAIL_ADDRESS = 'valmassoi@pm.me';
 
 const Contact = () => {
-  const [showCopyIcon, setShowCopyIcon] = useState(false);
+  const [isBoxHovered, setIsBoxHovered] = useState(false);
   const handleMouseEnterOfEmailBox = () => {
-    setShowCopyIcon(true);
+    setIsBoxHovered(true);
   }
   const handleMouseLeaveOfEmailBox = () => {
-    setShowCopyIcon(false);
+    setIsBoxHovered(false);
   }
   const handleCopyClick = () => {
     console.log('TODO animate success');
@@ -33,10 +33,8 @@ const Contact = () => {
         </div>
         <div className={styles.rightSide}>
           <CopyToClipboard text={EMAIL_ADDRESS} onCopy={handleCopyClick}>
-            <Box title="Copy Email Address" className={cn(styles.emailBox, { [styles.copyMode]: showCopyIcon })} onMouseEnter={handleMouseEnterOfEmailBox} onMouseLeave={handleMouseLeaveOfEmailBox}>
-              {showCopyIcon && (
-                <FaCopy size="20px" className={styles.copyIcon} />
-              )}
+            <Box title="Copy Email Address" className={cn(styles.emailBox, { [styles.copyMode]: isBoxHovered })} onMouseEnter={handleMouseEnterOfEmailBox} onMouseLeave={handleMouseLeaveOfEmailBox}>
+              <FaCopy size="20px" className={styles.copyIcon} />
               <H2>Email me</H2>
               <p className={styles.emailAddress}>{EMAIL_ADDRESS}</p>
             </Box>
