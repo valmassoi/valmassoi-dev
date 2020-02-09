@@ -38,6 +38,7 @@
   width: 300px;
   cursor: pointer;
   position: relative;
+  transition: opacity .1s ease-in-out, background-color .4s;
 }
 
 .emailAddress {
@@ -51,10 +52,23 @@
   color: $gray400;
 }
 
-.copyMode {
+.emailBox:hover { // Box hovered
   border: 1px solid $accentColor;
   background-color: rgba($accentColor, 0.1);
   .copyIcon {
     color: $accentColor;
+  }
+}
+
+.copied {
+  background-color: rgba($accentColor, 0.7) !important;
+  .copyIcon {
+    opacity: 0 !important;
+  }
+  .emailMe {
+    color: $gray50 !important;
+  }
+  .emailAddress {
+    color: $gray100 !important;
   }
 }
