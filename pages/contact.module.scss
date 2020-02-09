@@ -36,8 +36,22 @@
 .emailBox {
   margin: 50px;
   width: 300px;
+  cursor: pointer;
+  position: relative;
 }
 
 .emailAddress {
   margin: 10px 0 0;
+}
+
+.copyMode {
+  border: 1px solid $accentColor;
+  background-color: rgba($accentColor, 0.1);
+}
+
+.copyIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: $accentColor;
 }

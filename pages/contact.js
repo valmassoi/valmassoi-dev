@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
+import { FaCopy } from 'react-icons/fa';
+import cn from 'classnames';
 
 import Layout from '../components/Layout/Layout';
 import Box from '../components/Box/Box';
@@ -7,7 +10,19 @@ import MailBox from '../components/svgs/mailBox.svg'
 import styles from './contact.module.scss';
 import { H2 } from '../components/htmlElements';
 
+const EMAIL_ADDRESS = 'valmassoi@pm.me';
+
 const Contact = () => {
+  const [showCopyIcon, setShowCopyIcon] = useState(false);
+  const handleMouseEnterOfEmailBox = () => {
+    setShowCopyIcon(true);
+  }
+  const handleMouseLeaveOfEmailBox = () => {
+    setShowCopyIcon(false);
+  }
+  const handleCopyClick = () => {
+    console.log('TODO animate success');
+  }
   return (
     <Layout title="Contact">
       <div className={styles.container}>
@@ -17,11 +32,15 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.rightSide}>
-          {/* TODO copy to clipboard */}
-          <Box className={styles.emailBox}>
-            <H2>Email me</H2>
-            <p className={styles.emailAddress}>valmassoi@pm.me</p>
-          </Box>
+          <CopyToClipboard text={EMAIL_ADDRESS} onCopy={handleCopyClick}>
+            <Box title="Copy Email Address" className={cn(styles.emailBox, { [styles.copyMode]: showCopyIcon })} onMouseEnter={handleMouseEnterOfEmailBox} onMouseLeave={handleMouseLeaveOfEmailBox}>
+              {showCopyIcon && (
+                <FaCopy size="20px" className={styles.copyIcon} />
+              )}
+              <H2>Email me</H2>
+              <p className={styles.emailAddress}>{EMAIL_ADDRESS}</p>
+            </Box>
+          </CopyToClipboard>
         </div>
       </div>
     </Layout>
