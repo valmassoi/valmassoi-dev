@@ -30,11 +30,11 @@ const Resume = ({
     <Layout title="Resume">
       <div className={styles.markdownWrapper}>
         <div className={styles.markdown}>
-        <FaMarkdown size="30px" onClick={handleClick} className={cn(styles.markdownToggle, {[styles.activeToggle]: !pretty})} />
-        {pretty
-          ? <ReactMarkdown source={resumeData} />
-          : resumeData.split('\n').map((line, i) => <p key={line + i}>{line}</p>)
-        }
+          <FaMarkdown size="30px" onClick={handleClick} className={cn(styles.markdownToggle, {[styles.activeToggle]: !pretty})} />
+          {pretty
+            ? <ReactMarkdown source={resumeData} />
+            : resumeData.split('\n').map((line, i) => <p key={line + i}>{line}</p>)
+          }
         </div>
       </div>
     </Layout>

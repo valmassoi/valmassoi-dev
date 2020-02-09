@@ -1,4 +1,5 @@
 @import '../styles/colors.module.scss';
+@import '../styles/breakpoints.module.scss';
 
 .markdownWrapper {
   padding: 100px 15px;
@@ -12,6 +13,16 @@
   background-color: $white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
   position: relative;
+
+  @media (max-width: $tablet) {
+    padding: 40px 30px;
+  }
+  @media (max-width: $largeMobile) {
+    padding: 35px 20px;
+  }
+  @media (max-width: $mobile) {
+    padding: 35px 15px;
+  }
 
   code {
     padding: .2em .4em;
@@ -60,6 +71,10 @@
   position: absolute;
   top: 15px;
   right: 25px;
+  @media (max-width: $largeMobile) {
+    top: 5px;
+    right: 10px;
+  }
 }
 
 .activeToggle {
