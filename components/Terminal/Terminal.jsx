@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { string, node } from 'prop-types';
+import {
+  string,
+  node,
+  number,
+  func,
+} from 'prop-types';
 import cn from 'classnames';
 
 import styles from './terminal.module.scss';
 
 const Circle = ({
   color,
-  radius = 7,
+  radius,
   className,
   onClick,
 }) => (
@@ -14,6 +19,19 @@ const Circle = ({
     <circle cx={radius} cy={radius} r={radius} fill={color} />
   </svg>
 );
+
+Circle.propTypes = {
+  color: string.isRequired,
+  className: string,
+  onClick: func,
+  radius: number,
+};
+
+Circle.defaultProps = {
+  radius: 7,
+  className: '',
+  onClick: null,
+};
 
 const Terminal = ({ children, className, ...rest }) => {
   const [closed, setClosed] = useState(false);
