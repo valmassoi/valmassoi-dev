@@ -13,11 +13,9 @@ const Layout = ({
 }) => (
   <div className={styles.layout}>
     <Head title={title} />
+    <Nav />
     <div className={styles.contentWrapper}>
-      <Nav />
-      <div className={styles.content}>
-        {children}
-      </div>
+      {children}
     </div>
     <Footer />
   </div>

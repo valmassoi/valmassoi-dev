@@ -10,8 +10,7 @@
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 80vh;
-  align-items: center;
+  padding: 80px 0;
 }
 
 .leftSide,
@@ -33,7 +32,7 @@
 
 .mailboxWrapper {
   margin: 100px;
-  min-width: 300px  ;
+  min-width: 300px;
   max-width: 400px;
 }
 
