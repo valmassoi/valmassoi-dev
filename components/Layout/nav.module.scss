@@ -1,0 +1,71 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/zindexs.module.scss';
+
+$navbarHeight: 55px;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeLink {
+  color: black;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 11px 40px;
+}
+
+.navLinks,
+.mobileNavLinks {
+  list-style-type: none;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.navLinks {
+  margin: 0 20px 0;
+  li {
+    float: left;
+    padding: 15px 5px;
+    a {
+      padding: 15px 20px;
+    }
+  }
+  .activeLink {
+    border-bottom: 3px solid $accentColor;
+  }
+}
+
+.mobileNavLinks {
+  padding: 0;
+  a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .activeLink {
+    a {
+      background-color: rgba($accentColor, .1);
+      color: darken($accentColor, 30);
+    }
+  }
+}
+
+.barsIcon {
+  position: absolute;
+  right: 30px;
+  top: 12px;
+}
+
+.mobileMenu {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: $navbarHeight;
+  height: 100vh;
+  background-color: white;
+  z-index: $mobileNav;
+}

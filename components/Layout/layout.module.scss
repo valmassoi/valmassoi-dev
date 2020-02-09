@@ -18,34 +18,3 @@
 .content {
   background-color: $gray50;
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.homeLink {
-  color: black;
-  letter-spacing: 2px;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 11px 40px;
-}
-
-.navLinks {
-  list-style-type: none;
-  margin: 0 20px 0;
-  li {
-    float: left;
-    padding: 15px 5px;
-    a {
-      color: black;
-      padding: 15px 20px;
-      text-decoration: none;
-    }
-  }
-}
-
-.activeLink {
-  border-bottom: 3px solid $accentColor;
-}

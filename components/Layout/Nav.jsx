@@ -4,12 +4,13 @@ import { useRouter } from 'next/router';
 import { useDimensions } from 'react-recipes';
 import cn from 'classnames';
 
+import MobileMenu from './MobileMenu';
 import breakpoints from '../../styles/breakpoints.module.scss';
-import styles from './layout.module.scss';
+import styles from './nav.module.scss';
 
 const Nav = () => {
   const [wrapperRef, dimensions] = useDimensions(true, 100);
-  const isMobile = dimensions.width < parseFloat(breakpoints.mobile);
+  const isMobile = dimensions.width < parseFloat(breakpoints.largeMobile);
   console.log({isMobile});
   
   const links = [
@@ -27,15 +28,17 @@ const Nav = () => {
       <Link href="/">
         <a className={styles.homeLink}>Valmassoi</a>
       </Link>
-      <ul className={styles.navLinks}>
-        {links.map(({ key, href, label, active }) => (
-          <li key={key} className={cn({[styles.activeLink]: active})}>
-            <Link href={href}>
-              <a>{label}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {isMobile ? <MobileMenu links={links} /> : (
+        <ul className={styles.navLinks}>
+          {links.map(({ key, href, label, active }) => (
+            <li key={key} className={cn({[styles.activeLink]: active})}>
+              <Link href={href}>
+                <a>{label}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };
