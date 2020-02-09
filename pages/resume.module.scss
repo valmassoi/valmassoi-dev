@@ -11,6 +11,7 @@
   border-radius: 10px;
   background-color: $white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
+  position: relative;
 
   code {
     padding: .2em .4em;
@@ -19,4 +20,16 @@
     background-color: rgba(27, 31, 35, .05);
     border-radius: 3px;
   }
+}
+
+.markdownToggle {
+  color: $gray400;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.activeToggle {
+  color: black;
 }

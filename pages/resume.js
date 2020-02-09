@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import fetch from 'isomorphic-unfetch';
+import cn from 'classnames';
+import { FaMarkdown } from 'react-icons/fa';
 
 import Layout from '../components/Layout/Layout';
 // import { H1 } from '../components/htmlElements';
@@ -20,10 +22,20 @@ const fetchResumeData = async () => {
 const Resume = ({
   resumeData,
 }) => {
+  const [pretty, setPretty] = useState(true);
+  const handleClick = () => {
+    setPretty(!pretty);
+  }
   return (
     <Layout title="Resume">
       <div className={styles.markdownWrapper}>
-        <ReactMarkdown source={resumeData} className={styles.markdown} />
+        <div className={styles.markdown}>
+        <FaMarkdown size="30px" onClick={handleClick} className={cn(styles.markdownToggle, {[styles.activeToggle]: !pretty})} />
+        {pretty
+          ? <ReactMarkdown source={resumeData} />
+          : resumeData.split('\n').map((line, i) => <p key={line + i}>{line}</p>)
+        }
+        </div>
       </div>
     </Layout>
   );
