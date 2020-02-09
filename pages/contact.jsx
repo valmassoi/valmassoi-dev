@@ -5,21 +5,21 @@ import cn from 'classnames';
 
 import Layout from '../components/Layout/Layout';
 import Box from '../components/Box/Box';
-import MailBox from '../components/svgs/mailBox.svg'
+import MailBox from '../components/svgs/mailBox.svg';
 
 import styles from './contact.module.scss';
 import { H2 } from '../components/htmlElements';
 
 const EMAIL_ADDRESS = 'valmassoi@pm.me';
 
-const Contact = () => { 
+const Contact = () => {
   const [copied, setCopied] = useState(false);
   const handleCopyClick = () => {
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
     }, 1500);
-  }
+  };
   return (
     <Layout title="Contact">
       <div className={styles.container}>
