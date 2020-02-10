@@ -1,9 +1,9 @@
 import React from 'react';
 import Typist from 'react-typist';
 
-import Layout from '../components/Layout/Layout';
-import Terminal from '../components/Terminal/Terminal';
-import { H1 } from '../components/htmlElements';
+import Layout from 'app-components/Layout/Layout';
+import Terminal from 'app-components/Terminal/Terminal';
+import { H1 } from 'app-components/htmlElements';
 
 import styles from './index.module.scss';
 // import '../node_modules/react-typist/dist/Typist.css';
@@ -11,7 +11,7 @@ import styles from './index.module.scss';
 
 const Home = () => {
   // console.log(styles);
-  
+
   return (
     <Layout title="Home">
       <div className={styles.page}>

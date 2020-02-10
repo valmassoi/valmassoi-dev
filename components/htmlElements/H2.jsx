@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import colors from '../../styles/colors.module.scss';
+import colors from 'app-styles/colors.module.scss';
 
 const H2 = ({
   children,

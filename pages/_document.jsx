@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 
-import { GA_TRACKING_ID } from '../utils/ga';
+import { GA_TRACKING_ID } from 'app-utils/ga';
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -11,6 +11,7 @@ export default class extends Document {
     // Pass isProduction flag back through props
     return { ...initialProps, isProduction };
   }
+
   render() {
     return (
       <html>
@@ -42,6 +43,6 @@ export default class extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

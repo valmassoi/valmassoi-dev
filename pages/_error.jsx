@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Layout from '../components/Layout/Layout';
-import NotFound from '../components/svgs/notFound.svg';
+import Layout from 'app-components/Layout/Layout';
+import NotFound from 'app-components/svgs/notFound.svg';
 
 import styles from './error.module.scss';
 

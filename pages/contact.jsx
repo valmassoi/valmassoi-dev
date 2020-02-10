@@ -3,12 +3,12 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { FaCopy } from 'react-icons/fa';
 import cn from 'classnames';
 
-import Layout from '../components/Layout/Layout';
-import Box from '../components/Box/Box';
-import MailBox from '../components/svgs/mailBox.svg';
+import { H2 } from 'app-components/htmlElements';
+import Layout from 'app-components/Layout/Layout';
+import Box from 'app-components/Box/Box';
+import MailBox from 'app-components/svgs/mailBox.svg';
 
 import styles from './contact.module.scss';
-import { H2 } from '../components/htmlElements';
 
 const EMAIL_ADDRESS = 'valmassoi@pm.me';
 

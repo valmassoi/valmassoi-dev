@@ -5,19 +5,19 @@ import fetch from 'isomorphic-unfetch';
 import cn from 'classnames';
 import { FaMarkdown } from 'react-icons/fa';
 
-import Layout from '../components/Layout/Layout';
-// import { H1 } from '../components/htmlElements';
+import Layout from 'app-components/Layout/Layout';
+// import { H1 } from 'app-components/htmlElements';
 import styles from './resume.module.scss';
 
 const fetchResumeData = async () => {
-  const res = fetch(`https://raw.githubusercontent.com/valmassoi/resume/master/Valmassoi_Resume_Soft-Dev.md`);
+  const res = fetch('https://raw.githubusercontent.com/valmassoi/resume/master/Valmassoi_Resume_Soft-Dev.md');
   try {
-    return await res.then(response => response.text());
+    return await res.then((response) => response.text());
   } catch (err) {
     console.error(err);
-    return 'Error loading resume.'
+    return 'Error loading resume.';
   }
-}
+};
 
 const Resume = ({
   resumeData,
@@ -25,16 +25,15 @@ const Resume = ({
   const [pretty, setPretty] = useState(true);
   const handleClick = () => {
     setPretty(!pretty);
-  }
+  };
   return (
     <Layout title="Resume">
       <div className={styles.markdownWrapper}>
         <div className={styles.markdown}>
-          <FaMarkdown size="30px" onClick={handleClick} className={cn(styles.markdownToggle, {[styles.activeToggle]: !pretty})} />
+          <FaMarkdown size="30px" onClick={handleClick} className={cn(styles.markdownToggle, { [styles.activeToggle]: !pretty })} />
           {pretty
             ? <ReactMarkdown source={resumeData} />
-            : resumeData.split('\n').map((line, i) => <p key={line + i}>{line}</p>)
-          }
+            : resumeData.split('\n').map((line, i) => <p key={line + i}>{line}</p>)}
         </div>
       </div>
     </Layout>

@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import { useDimensions } from 'react-recipes';
 import cn from 'classnames';
 
+import breakpoints from 'app-styles/breakpoints.module.scss';
 import MobileMenu from './MobileMenu';
-import breakpoints from '../../styles/breakpoints.module.scss';
 import styles from './nav.module.scss';
 
 const Nav = () => {
