@@ -48,12 +48,11 @@ const Terminal = ({ children, className, ...rest }) => {
   };
   const handleMinimizeClick = () => {
     // https://codepen.io/balapa/pen/obpLeJ/
-    setMinimized(true);
-    // eslint-disable-next-line
-    alert('Minimize Coming Soon.');
+    setMinimized(!minimized);
   };
   const handleExpandClick = () => {
     setExpanded(!expanded);
+    setMinimized(false);
   };
   const handleTrafficLightsMouseEnter = () => {
     setShowIcons(true);
@@ -78,7 +77,7 @@ const Terminal = ({ children, className, ...rest }) => {
           <Circle color="#70bd3c" onClick={handleExpandClick} className={styles.expandCircle} icon={showIcons ? <FaPlus color="#265a15" size="12px" /> : null} />
         </div>
       </div>
-      <div className={styles.terminalBody}>
+      <div className={cn(styles.terminalBody, { [styles.minimized]: minimized })}>
         {children}
       </div>
     </div>
