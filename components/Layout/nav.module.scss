@@ -44,6 +44,9 @@ $navbarHeight: 55px;
   a {
     display: block;
     padding: 15px 20px;
+    &:hover {
+      background-color: $gray100;
+    }
   }
   .activeLink {
     a {
@@ -54,6 +57,7 @@ $navbarHeight: 55px;
 }
 
 .barsIcon {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 12px;
