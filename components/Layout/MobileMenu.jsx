@@ -2,11 +2,41 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
+import { useLockBodyScroll } from 'react-recipes';
 import cn from 'classnames';
 
 import styles from './nav.module.scss';
 
 const MobileMenu = ({
+  links,
+}) => {
+  useLockBodyScroll();
+
+  return (
+    <div className={styles.mobileMenu}>
+      <ul className={styles.mobileNavLinks}>
+        {links.map(({
+          key,
+          href,
+          label,
+          active,
+        }) => (
+          <li key={key} className={cn({ [styles.activeLink]: active })}>
+            <Link href={href}>
+              <a>{label}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+MobileMenu.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
+
+const MobileMenuWrapper = ({
   links,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,30 +48,13 @@ const MobileMenu = ({
   return (
     <div>
       <FaBars size="30px" className={styles.barsIcon} onClick={handleClick} />
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
-          <ul className={styles.mobileNavLinks}>
-            {links.map(({
-              key,
-              href,
-              label,
-              active,
-            }) => (
-              <li key={key} className={cn({ [styles.activeLink]: active })}>
-                <Link href={href}>
-                  <a>{label}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {menuOpen && <MobileMenu links={links} />}
     </div>
   );
 };
 
-MobileMenu.propTypes = {
+MobileMenuWrapper.propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
-export default MobileMenu;
+export default MobileMenuWrapper;
