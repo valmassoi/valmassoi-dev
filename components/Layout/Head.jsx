@@ -5,7 +5,11 @@ import { string } from 'prop-types';
 const Head = (props) => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title}</title>
+    <title>
+      Valmassoi |
+      {' '}
+      {props.title}
+    </title>
     <meta
       name="description"
       content={props.description}

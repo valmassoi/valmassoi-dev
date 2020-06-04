@@ -11,7 +11,6 @@ import styles from './nav.module.scss';
 const Nav = () => {
   const [wrapperRef, dimensions] = useDimensions(true, 100);
   const isMobile = dimensions.width < parseFloat(breakpoints.largeMobile);
-  console.log({ isMobile });
 
   const links = [
     { href: '/resume', label: 'Resume' },
