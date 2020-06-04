@@ -6,6 +6,7 @@ $navbarHeight: 55px;
 .navbar {
   display: flex;
   justify-content: space-between;
+  @media print { display: none !important; }
 }
 
 .homeLink {

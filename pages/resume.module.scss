@@ -6,6 +6,9 @@
   @media (max-width: $largeMobile) {
     padding: 40px 15px;
   }
+  @media print {
+    padding: 20px;
+  }
 }
 
 .markdown {
@@ -26,6 +29,10 @@
   @media (max-width: $mobile) {
     padding: 35px 15px;
   }
+  @media print {
+    box-shadow: none;
+    padding: 0px;
+  }
 
   code {
     padding: .2em .4em;
@@ -41,6 +48,10 @@
     box-shadow: inset 0 -1px 0 $accentColor;
     &:hover {
       color: darken($accentColor, 30);
+    }
+    @media print {
+      box-shadow: none;
+      border-bottom: 1px solid $accentColor;
     }
   }
 
@@ -78,6 +89,7 @@
     top: 5px;
     right: 10px;
   }
+  @media print { display: none !important; }
 }
 
 .activeToggle {

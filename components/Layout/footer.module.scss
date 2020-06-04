@@ -3,6 +3,7 @@
 .footer {
   height: 50px;
   background-color: white;
+  @media print { display: none !important; }
 }
 
 .footerLinks {
