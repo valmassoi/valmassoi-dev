@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { FaMarkdown } from 'react-icons/fa';
 
 import Layout from 'app-components/Layout/Layout';
-// import { H1 } from 'app-components/htmlElements';
+
 import styles from './resume.module.scss';
 
 const fetchResumeData = async () => {
@@ -26,11 +26,15 @@ const Resume = ({
   const handleClick = () => {
     setPretty(!pretty);
   };
+  const markdownToggleTitle = pretty ? 'View Raw' : 'View Markdown';
   return (
     <Layout title="Resume">
       <div className={styles.markdownWrapper}>
         <div className={styles.markdown}>
-          <FaMarkdown size="30px" onClick={handleClick} className={cn(styles.markdownToggle, { [styles.activeToggle]: !pretty })} />
+          <div className={styles.buttonsWrapper}>
+            <a href="https://github.com/valmassoi/resume/raw/master/Valmassoi_Resume_Soft-Dev.pdf" className={styles.downloadPdf}>Download PDF</a>
+            <FaMarkdown title={markdownToggleTitle} size="30px" onClick={handleClick} className={cn(styles.markdownToggle, { [styles.activeToggle]: !pretty })} />
+          </div>
           {pretty
             ? <ReactMarkdown source={resumeData} />
             : resumeData.split('\n').map((line, i) => <p key={line + i}>{line}</p>)}

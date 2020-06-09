@@ -79,10 +79,10 @@
   }
 }
 
-.markdownToggle {
-  color: $gray400;
-  cursor: pointer;
+.buttonsWrapper {
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 15px;
   right: 25px;
   @media (max-width: $largeMobile) {
@@ -90,6 +90,15 @@
     right: 10px;
   }
   @media print { display: none !important; }
+}
+
+.downloadPdf {
+  margin-right: 20px;
+}
+
+.markdownToggle {
+  color: $gray400;
+  cursor: pointer;
 }
 
 .activeToggle {
