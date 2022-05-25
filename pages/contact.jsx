@@ -10,7 +10,7 @@ import MailBox from 'app-components/svgs/mailBox.svg';
 
 import styles from './contact.module.scss';
 
-const EMAIL_ADDRESS = 'valmassoi@pm.me';
+const EMAIL_ADDRESS = 'orient_00agility@icloud.com';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
